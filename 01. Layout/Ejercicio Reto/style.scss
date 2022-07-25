@@ -1,0 +1,145 @@
+@import "https://fonts.googleapis.com/css2?family=Jost";
+$highResBreakPointStart: 1280px;
+$lowResBreakPointEnd: 574px;
+$backgroundColor: #141414;
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;    
+    font-family: Jost;
+    background-color: $backgroundColor;
+    color:white;    
+}
+
+header{
+    display: flex;    
+    justify-content:space-between;
+    position: sticky;
+    align-items: center;
+    top:0;
+    width: 100%;
+    padding: 20px;    
+    box-sizing: border-box;
+    background-color: $backgroundColor;
+    z-index: 1001;
+    .header-logo{
+        display: flex;
+        justify-content: space-between;
+        font-size: 2em;
+        gap:10px;
+        align-items: center;
+    }
+    .header-buttons{
+        display: flex;
+        justify-content:space-between;        
+        gap: 20px;
+        font-size: 1em;
+        div{
+            padding: 5px;
+            &:hover{
+            background-color: white;            
+            color: black;
+            border-radius: 5px;
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: $highResBreakPointStart) {
+        .header-logo{
+            > div{
+                display: none;
+            }
+        }        
+        .header-buttons {
+            font-size: 1.2em;
+        }        
+    }
+}
+
+
+main{    
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 5px;
+    .section-title{
+        font-size: 1.2em;
+        #top-text::before{
+            font-weight: bold;
+            content: "5";
+        }
+        @media screen and (max-width: $highResBreakPointStart) {
+            font-size: 1.7em;
+            #top-text::before{
+                content: "3";
+            }
+        }
+    }
+    
+    .top{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content:flex-end ;
+        .top-item{
+            flex-basis: 225px;
+            flex-grow: 1;
+            img{
+               width: 100%;
+            }
+        }
+        @media screen and (max-width: $highResBreakPointStart) {
+            flex-wrap:wrap-reverse;
+            div:nth-child(1), div:nth-child(2){
+                display: none;
+            }            
+        }        
+    }
+}
+
+
+.first, .second{
+    display:flex;
+    gap:5px;
+    padding-bottom: 80px;
+    align-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .item {
+        flex-basis: 250px;
+        flex-grow: 1;      
+        &:hover{                  
+            flex-basis: 300px;                      
+            z-index: 999;            
+        }        
+        img{
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    @media screen and (max-width: $lowResBreakPointEnd) {  
+        gap:10px;
+        .item{                           
+            &:hover{ 
+                margin: 0% -3%;
+            }
+        }
+    }
+} 
+
+       
+
+    
+
+.top, .first, .second{
+    padding-bottom: 80px;
+}
+
+.section-title{
+    z-index: 1000;
+}

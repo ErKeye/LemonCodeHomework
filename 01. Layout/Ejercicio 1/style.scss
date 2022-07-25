@@ -1,0 +1,63 @@
+$gap: 5px;
+
+
+
+@mixin createColorBoxClasses ($baseColor, $numLevels:4, $step:5) {
+    @for $Level from 1 through $numLevels{
+        .darken-#{$Level}{
+            $darkedColor: darken($baseColor, $Level*$step);
+            background-color: $darkedColor;
+            color: invert($darkedColor);
+        }
+        .lighten-#{$Level}{
+            $lightedColor : lighten($baseColor, $Level*$step);
+            background-color: ($lightedColor );
+            color: invert($lightedColor);
+        }
+    }
+    .base-color{
+        background-color: $baseColor;
+        color: complement($baseColor);
+    }
+
+}
+
+.container-1{
+    @include createColorBoxClasses(red);
+}
+
+.container-2{
+    @include createColorBoxClasses(blue);
+}
+
+.container-3{
+    @include createColorBoxClasses(green);
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    div {
+        display: flex;    
+        gap: $gap;
+    }
+    overflow: scroll;
+}
+
+
+.box {
+    border-radius: 3px;
+    padding: 10px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-shrink:0 ;
+}
+
+
+
+
+

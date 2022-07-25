@@ -1,0 +1,22 @@
+$baseColor:red;
+
+.base{
+    background-color: $baseColor;
+}
+.important{
+    background-color: darken($baseColor, 25);    
+}
+.warning{
+    background-color: lighten($baseColor, 25);
+}
+.shadow{   
+    box-shadow: -7px 7px 10px black;
+}
+.container h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+
+.container h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
