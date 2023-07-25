@@ -1,4 +1,4 @@
-# Webpack bundling exercice
+# Webpack bundling exercise
 
 ### Description
 

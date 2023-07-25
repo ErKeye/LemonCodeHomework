@@ -1,4 +1,4 @@
-# JavaScript & TypeScript exercices playground
+# JavaScript & TypeScript exercises playground
 
 ### Description
 
