@@ -1,0 +1,11 @@
+$textColor: darkgreen;
+$imageWidth: 400px;
+
+.main-title {
+  color: $textColor;
+  font-size: 50px;
+}
+
+.images {
+    width: $imageWidth;
+}
