@@ -17,7 +17,7 @@ Then you can check the following scripts
 
 For development bundle:
 ```console
- npm run start
+ npm start
 ```
 
 For production bundle:
