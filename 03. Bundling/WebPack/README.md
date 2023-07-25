@@ -13,7 +13,7 @@ For reviewing the exercices first intall dependecies:
  npm install
 ```
 
-And then you can check the following scripts
+Then you can check the following scripts
 
 For development bundle:
 ```console
